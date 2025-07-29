@@ -2,13 +2,14 @@ program DeeplinksDemo;
 
 uses
   Vcl.Forms,
-  FormMain in 'Forms\FormMain.pas' {Form1};
+  FormMain_u in 'Forms\FormMain_u.pas' {FormMain},
+  UtilDeeplinks in 'Utils\UtilDeeplinks.pas';
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TFormMain, FormMain);
   Application.Run;
 end.

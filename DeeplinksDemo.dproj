@@ -123,10 +123,11 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="Forms\FormMain.pas">
-            <Form>Form1</Form>
+        <DCCReference Include="Forms\FormMain_u.pas">
+            <Form>FormMain</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Utils\UtilDeeplinks.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

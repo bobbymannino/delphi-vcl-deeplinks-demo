@@ -1,4 +1,4 @@
-unit FormMain;
+unit FormMain_u;
 
 interface
 
@@ -7,8 +7,9 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
 
 type
-  TForm1 = class(TForm)
+  TFormMain = class(TForm)
     LabelOutput: TLabel;
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -16,10 +17,17 @@ type
   end;
 
 var
-  Form1: TForm1;
+  FormMain: TFormMain;
 
 implementation
 
 {$R *.dfm}
+
+uses UtilDeeplinks;
+
+procedure TFormMain.FormCreate(Sender: TObject);
+begin
+    RegisterDeeplink('myapp', 'Deeplinks Demo', ParamStr(0));
+end;
 
 end.
